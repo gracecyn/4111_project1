@@ -1,0 +1,134 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+<h2>Department members</h2>
+<h3>CS</h3>
+<form method="POST" action="/department">
+</form>
+    <div>
+      <table border=2 width="75%">
+        <thead>
+          <tr bgcolor="#dcdcdd">
+              <th>name</th>
+              <th>identity</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            {% for formalname, identities in csResult %}
+            <tr>
+                <td>{{formalname}}</td>
+                <td>{{identities}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+      <br>
+    </div>
+
+<h3>Math</h3>
+<form method="POST" action="/department">
+</form>
+    <div>
+      <table border=2 width="75%">
+        <thead>
+          <tr bgcolor="#dcdcdd">
+              <th>name</th>
+              <th>identity</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            {% for formalname, identities in mathResult %}
+            <tr>
+                <td>{{formalname}}</td>
+                <td>{{identities}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+      <br>
+    </div>
+
+<h3>Music</h3>
+<form method="POST" action="/department">
+</form>
+    <div>
+      <table border=2 width="75%">
+        <thead>
+          <tr bgcolor="#dcdcdd">
+              <th>name</th>
+              <th>identity</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            {% for formalname, identities in musicResult %}
+            <tr>
+                <td>{{formalname}}</td>
+                <td>{{identities}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+      <br>
+    </div>
+
+<h3>English</h3>
+<form method="POST" action="/department">
+</form>
+    <div>
+      <table border=2 width="75%">
+        <thead>
+          <tr bgcolor="#dcdcdd">
+              <th>name</th>
+              <th>identity</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            {% for formalname, identities in englishResult %}
+            <tr>
+                <td>{{formalname}}</td>
+                <td>{{identities}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+      <br>
+    </div>
+
+<h3>History</h3>
+<form method="POST" action="/department">
+</form>
+    <div>
+      <table border=2 width="75%">
+        <thead>
+          <tr bgcolor="#dcdcdd">
+              <th>name</th>
+              <th>identity</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            {% for formalname, identities in historyResult %}
+            <tr>
+                <td>{{formalname}}</td>
+                <td>{{identities}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+      <br>
+    </div>
+<p><a href="/">Return</a></p>
+</body>
+
+</html>

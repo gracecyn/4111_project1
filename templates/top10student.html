@@ -1,0 +1,48 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+<h2>Top 10 students</h2>
+
+<form method="POST" action="/top10student">
+</form>
+    <div>
+      <table border=2 width="75%">
+        <thead>
+          <tr bgcolor="#dcdcdd">
+              <th>name</th>
+              <th>student ID</th>
+              <th>birthday</th>
+              <th>year</th>
+              <th>major</th>
+              <th>GPA</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            {% for name, sid, birthday, year, major, GPA in data %}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{sid}}</td>
+                <td>{{birthday}}</td>
+                <td>{{year}}</td>
+                <td>{{major}}</td>
+                <td>{{GPA}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+      <br>
+    </div>
+
+<p><a href="student">Return</a></p>
+</body>
+
+
+</html>

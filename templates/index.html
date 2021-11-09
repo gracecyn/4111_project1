@@ -1,0 +1,60 @@
+<html>
+  <style>
+    body{ 
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+<h2>Teacher's information</h2>
+<h3><a href="department">Check all department members</a></h3>
+
+<p><a href="student">Click here to search students' information</a></p>
+<p><a href="class">Click here to search class information</a></p>
+
+
+
+<form method="POST" action="/">
+<p>Name of teacher: <input type="text" name="teachers"> Department: <input type="text" name="department">
+    <input type="submit" value="search"></p>
+</form>
+<p><a href="top10teacher">Top 10 rating teachers</a></p>
+    <h2>Search Results</h2>
+    <div>
+      <table border=2 width="75%">
+        <thead>
+          <tr bgcolor="#dcdcdc">
+              <th>name</th>
+              <th>teacher ID</th>
+              <th>birthday</th>
+              <th>salary</th>
+              <th>department</th>
+              <th>rating</th>
+              <th>course taught</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            {% for name, tid, birthday, salary, department, rating, class_id in data %}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{tid}}</td>
+                <td>{{birthday}}</td>
+                <td>{{salary}}</td>
+                <td>{{department}}</td>
+                <td>{{rating}}</td>
+                <td>{{class_id}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+      <br>
+    </div>
+
+
+</body>
+
+
+</html>

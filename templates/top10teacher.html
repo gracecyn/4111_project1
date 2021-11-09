@@ -1,0 +1,50 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+<h2>Top 10 rating teachers</h2>
+
+<form method="POST" action="/top10teacher">
+</form>
+    <div>
+      <table border=2 width="75%">
+        <thead>
+          <tr bgcolor="#dcdcdc">
+              <th>name</th>
+              <th>teacher ID</th>
+              <th>birthday</th>
+              <th>salary</th>
+              <th>department</th>
+              <th>rating</th>
+              <th>course taught</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            {% for name, tid, birthday, salary, department, rating, class_id in data %}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{tid}}</td>
+                <td>{{birthday}}</td>
+                <td>{{salary}}</td>
+                <td>{{department}}</td>
+                <td>{{rating}}</td>
+                <td>{{class_id}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+      <br>
+    </div>
+
+<p><a href="/">Return</a></p>
+</body>
+
+
+</html>

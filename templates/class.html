@@ -1,0 +1,52 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body>
+<h2>Class information</h2>
+<p><a href="\">Click here to search teachers' information</a></p>
+<p><a href="student">Click here to search students' information</a></p>
+
+<form method="POST" action="/class">
+<p>Name of class: <input type="text" name="classes"> Building: <input type="text" name="location">
+    <input type="submit" value="search"></p>
+</form>
+
+    <h2>Search Results</h2>
+    <div>
+      <table border=2 width="75%">
+        <thead>
+          <tr bgcolor="#dcdcdc">
+              <th>class ID</th>
+              <th>capacity</th>
+              <th>held days</th>
+              <th>room ID</th>
+              <th>teacher's name</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            {% for class_id, capacity, held_days, room_id, name in data %}
+            <tr>
+                <td>{{class_id}}</td>
+                <td>{{capacity}}</td>
+                <td>{{held_days}}</td>
+                <td>{{room_id}}</td>
+                <td>{{name}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+      <br>
+    </div>
+
+
+</body>
+
+
+</html>
